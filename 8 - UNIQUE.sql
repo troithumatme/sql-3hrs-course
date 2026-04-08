@@ -1,18 +1,16 @@
---  create products table with the initial columns
---  the product_name column is unique, meaning no two products can have the same name
---  if we try to insert a product with a name that already exists, it will result in an error
+-- UNIQUE CONSTRAINT
+
+-- Prevent duplicate values in specific columns
 CREATE TABLE products (
     product_id INT,
     product_name varchar(25) UNIQUE,
     price decimal(7, 2)
 );
 
---  if initially we created the products table without the UNIQUE constraint, we can add it later using ALTER TABLE
+-- Add UNIQUE constraint to existing table
 ALTER TABLE products ADD CONSTRAINT UNIQUE (product_name);
 
-SELECT * FROM products;
-
---  insert some products with 2 duplicate product names to test the UNIQUE constraint
+-- This insertion will fail due to duplicate 'graphic card'
 --  this will result in an error because 'graphic card' is duplicated
 INSERT INTO
     products
@@ -26,7 +24,7 @@ VALUES (100, 'miled coffee', 19.99),
     (103, 'graphic card', 3999.99),
     (104, 'graphic card', 2999.99);
 
---  this should work because all product names are unique
+-- Successful insertion with unique names
 INSERT INTO
     products
 VALUES (100, 'miled coffee', 19.99),

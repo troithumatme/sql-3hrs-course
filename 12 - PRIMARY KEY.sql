@@ -1,17 +1,17 @@
---  PRIMARY KEY = UNIQUE + NOT NULL + only one primary key per table
+-- PRIMARY KEYS
 
---  create transactions table with a primary key on the transaction_id column
+-- Primary Key = Unique + Not Null
+
 CREATE TABLE transactions (
     transaction_id INT PRIMARY KEY,
     amount decimal(7, 2) NOT NULL
 );
 
---  if we initially created the transactions table without the PRIMARY KEY constraint, we can add it later using ALTER TABLE
+-- Add Primary Key to existing table
 ALTER TABLE transactions ADD PRIMARY KEY (transaction_id);
 
 SELECT * FROM transactions;
 
---  instert some transactions with duplicate transaction_id values to test the PRIMARY KEY constraint
 INSERT INTO
     transactions
 VALUES (1000, 3.39),
@@ -21,5 +21,5 @@ VALUES (1000, 3.39),
 
 SELECT * FROM transactions;
 
---  refund for the client where transaction_id is 1003
+-- Lookup by Primary Key
 SELECT amount FROM transactions WHERE transaction_id = 1003;

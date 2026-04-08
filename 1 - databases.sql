@@ -1,14 +1,16 @@
--- create database name db1
+-- DATABASE OPERATIONS
+
+-- Create database
 CREATE DATABASE db1;
 
--- delete db1
+-- Delete database
 DROP DATABASE db1;
 
--- select default schema (db1)
+-- Select default schema
 USE db1;
 
--- make the db1 read only
+-- Set database to read-only
 ALTER DATABASE db1 READ ONLY = 1;
 
--- make the db1 adjustable
+-- Set database to read-write
 ALTER DATABASE db1 READ ONLY = 0;

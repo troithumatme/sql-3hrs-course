@@ -1,4 +1,6 @@
 -- FOREIGN KEYS
+
+-- Establish relationships between tables
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50),
@@ -33,5 +35,4 @@ VALUES (3.39, 2),
 
 SELECT * FROM transactions;
 
--- can not delete a customer if there are transactions associated with that customer due to the FOREIGN KEY constraint
-DELETE FROM customers WHERE customer_id = 3;
+-- ETE FROM customers WHERE customer_id = 3;

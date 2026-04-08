@@ -1,4 +1,6 @@
--- insert 1 row into the table
+-- INSERTING ROWS
+
+-- Single row insertion
 INSERT INTO
     employees
 VALUES (
@@ -11,7 +13,7 @@ VALUES (
 
 SELECT * FROM employees;
 
--- insert multiple rows into the table
+-- Multiple row insertion
 INSERT INTO
     employees
 VALUES (
@@ -52,7 +54,7 @@ VALUES (
 
 SELECT * FROM employees;
 
--- insert a row with missing data
+-- Partial row insertion (specifying columns)
 INSERT INTO
     employees (
         employee_id,

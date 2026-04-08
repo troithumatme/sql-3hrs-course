@@ -1,15 +1,17 @@
---  set autocommit to off to manual control the transaction, and then commit or rollback the transaction
+-- TRANSACTION CONTROL
+
+-- Disable autocommit for manual transaction management
 SET AUTOCOMMIT = OFF;
 
---  commit to save the changes to the database
+-- Save changes permanently
 COMMIT;
 
---  accidentally delete all employees data
+-- Simulation of accidental deletion
 DELETE FROM employees;
 
 SELECT * FROM employees;
 
---  rollback to undo the changes to the database
+-- Undo changes since last commit
 ROLLBACK;
 
 SELECT * FROM employees;
