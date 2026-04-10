@@ -50,7 +50,16 @@ VALUES (
         'Mệnh',
         999.99,
         '2026-04-04'
+    ),
+    (
+        9,
+        'Hộ Hoa',
+        'Tán Sư',
+        699.69,
+        NULL,
+        '2007-10-26'
     );
+;
 
 SELECT * FROM employees;
 
