@@ -34,5 +34,3 @@ VALUES (3.39, 2),
     (11.99, 3);
 
 SELECT * FROM transactions;
-
--- ETE FROM customers WHERE customer_id = 3;
